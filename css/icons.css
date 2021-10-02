@@ -33,3 +33,10 @@
 .icon-watch:before {
 	content: '\e901';
 }
+
+@media screen and (min-width: 690px) {
+	.icon-menu:before,
+	.icon-watch:before {
+		font-size: 25.14px;
+	}
+}

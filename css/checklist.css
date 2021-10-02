@@ -3,9 +3,9 @@
 }
 
 .checklist-content {
+	border: none;
 	margin: 0;
 	padding: 0;
-	border: none;
 }
 
 .checklist-content legend {
@@ -13,15 +13,15 @@
 }
 
 .checklist-content label {
-	display: block;
-	position: relative;
-	padding-left: 35px;
 	cursor: pointer;
+	display: block;
 	font: var(--medium);
-	-webkit-user-select: none;
+	padding-left: 35px;
+	position: relative;
+	user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none;
+	-webkit-user-select: none;
 }
 
 .checklist-content input {
@@ -33,17 +33,17 @@
 }
 
 .checkmark {
+	block-size: 21px;
+	border-radius: 4px;
+	border: 1px solid var(--gray30);
+	inline-size: 21px;
+	left: 0;
 	position: absolute;
 	top: 5px;
-	left: 0;
-	block-size: 21px;
-	inline-size: 21px;
-	border: 1px solid var(--gray30);
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	-ms-border-radius: 4px;
 	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
 }
 
 .checklist-content input:checked ~ .checkmark {
@@ -52,15 +52,26 @@
 }
 
 .checkmark:after {
-	content: '\2713';
-	position: absolute;
-	font-size: 12px;
-	display: none;
 	color: white;
-	top: -6px;
+	content: '\2713';
+	display: none;
+	font-size: 12px;
 	left: 6px;
+	position: absolute;
+	top: -6px;
 }
 
 .checklist-content input:checked ~ .checkmark:after {
 	display: block;
+}
+
+@media screen and (min-width: 690px) {
+	.checklist {
+		margin-block-end: 28px;
+		margin-block-start: 32px;
+	}
+
+	.checklist-content label {
+		margin-block-end: 13px;
+	}
 }
