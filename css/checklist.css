@@ -1,0 +1,66 @@
+.checklist {
+	margin-block-end: 40px;
+}
+
+.checklist-content {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.checklist-content legend {
+	margin-block-end: 24px;
+}
+
+.checklist-content label {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	cursor: pointer;
+	font: var(--medium);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.checklist-content input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	block-size: 21px;
+	inline-size: 21px;
+	border: 1px solid var(--gray30);
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+
+.checklist-content input:checked ~ .checkmark {
+	background-color: var(--orange);
+	border: none;
+}
+
+.checkmark:after {
+	content: '\2713';
+	position: absolute;
+	font-size: 12px;
+	display: none;
+	color: white;
+	top: -6px;
+	left: 6px;
+}
+
+.checklist-content input:checked ~ .checkmark:after {
+	display: block;
+}

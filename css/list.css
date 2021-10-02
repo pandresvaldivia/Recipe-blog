@@ -1,0 +1,37 @@
+.steps-list .h1 {
+	margin-block-end: 28px;
+}
+
+.list {
+	list-style: none;
+	counter-reset: item;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.list li {
+	padding-inline-start: 51px;
+	position: relative;
+}
+
+.list li::before {
+	position: absolute;
+	counter-increment: item;
+	content: counter(item);
+	left: 0;
+	top: -1px;
+	display: block;
+	block-size: 36px;
+	inline-size: 36px;
+	background: var(--orange);
+	text-align: center;
+	color: var(--white);
+	font: var(--list);
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+}

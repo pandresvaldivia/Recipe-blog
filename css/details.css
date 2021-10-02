@@ -1,0 +1,40 @@
+.details {
+	margin-block-end: 30px;
+	margin-block-start: 24px;
+}
+
+.details-yields,
+.details-time {
+	display: flex;
+	align-items: center;
+	gap: 5.52px;
+}
+
+.details-yields p,
+.details-time p {
+	display: flex;
+	flex-direction: column;
+	font: var(--small);
+	color: var(--gray10);
+	margin: 0;
+}
+
+.details-yields em,
+.details-time em {
+	font: var(--smallBold);
+	color: var(--gray40);
+	text-transform: uppercase;
+}
+
+.details-yields {
+	margin-block-end: 20.75px;
+}
+
+.details-yields span {
+	color: var(--orange);
+}
+
+.details-container {
+	display: flex;
+	gap: 48px;
+}
