@@ -74,4 +74,8 @@
 	.checklist-content label {
 		margin-block-end: 13px;
 	}
+
+	.checkmark:after {
+		top: -2px;
+	}
 }
